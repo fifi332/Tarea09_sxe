@@ -20,18 +20,17 @@ Con la aplicación **Inventario** instalada, Odoo 19 clasifica los productos en 
 ### 2.1. Bienes con *Rastrear inventario* (Almacenable)
 Producto físico del que se lleva control de existencias, entradas, salidas y stock por almacén (ej. *Escritorio en L con asiento a la izquierda*).
 * **Impuestos asignados**: Vacíos en la ficha de demostración.
-
-![Bienes con rastreo de inventario](./img/02_prod_rastreable.png)
+![rastreable.png](img/rastreable.png)
 
 ### 2.2. Bienes sin *Rastrear inventario* (Consumible)
 Producto físico que se entrega pero del que no se gestiona inventario ni niveles de stock (ej. *Folios, tornillería*).
 * **Impuestos asignados**: Vacíos en la ficha de demostración.
-
+![norastreable.png](img/norastreable.png)
 
 ### 2.3. Servicio
 Prestación intangible que no se entrega físicamente ni genera movimientos de almacén (ej. *Horas de soporte o instalación*).
 * **Impuestos asignados**: Vacíos en la ficha de demostración.
-
+![pro_servicio.png](img/pro_servicio.png)
 
 ### 2.4. Combinación (Pack)
 Conjunto de varios productos agrupados que se venden de forma conjunta, gestionándose el stock de cada componente por separado.
