@@ -65,13 +65,14 @@ Se crean dos artículos marcando la casilla **Ventas** y verificando la asignaci
 ### 3.4. Presupuesto y confirmación a Pedido de Venta
 Desde **Ventas**, se genera un presupuesto para el nuevo cliente añadiendo ambos productos. Tras simular el envío por correo electrónico y pulsar **Confirmar**, el documento cambia de estado a **Pedido de venta**.
 
-![Pedido de venta confirmado](./img/09_pedido_venta.png)
+![Captura desde 2026-11-12 11-34-12.png](img/Captura%20desde%202026-11-12%2011-34-12.png)
+![Captura desde 2026-11-12 11-35-17.png](img/Captura%20desde%202026-11-12%2011-35-17.png)
+![Captura desde 2026-11-12 11-39-56.png](img/Captura%20desde%202026-11-12%2011-39-56.png)
 
 ### 3.5. Facturación, PDF y Registro de Pago
 Desde el pedido de venta se genera la factura borrador (`Crear factura`). Se verifica que cada línea aplica correctamente su tipo impositivo (21% y 4%) y que la base imponible y el total cuadran. Tras confirmarla y descargar su versión en PDF, se registra el cobro, apareciendo la etiqueta verde **Pagado**.
 
 ![facturacion.png](img/facturacion.png)
-
 ### 3.6. Comparativa con Factura de Proveedor
 Al inspeccionar una factura en **Facturación → Proveedores → Facturas**, se observan diferencias clave respecto a las de cliente: utiliza impuestos soportados (de compra) en lugar de repercutidos, incorpora un campo específico para la referencia de factura del proveedor y gestiona cuentas bancarias de destino para el pago.
 
@@ -79,16 +80,14 @@ Al inspeccionar una factura en **Facturación → Proveedores → Facturas**, se
 
 ### 3.7. Planificación de actividad en el Chatter
 En el panel lateral (*Chatter*) de la ficha del cliente se programa una actividad de seguimiento (llamada telefónica), quedando registrada en el historial del registro.
-
-![Actividad programada en Chatter](./img/12_chatter.png)
-
+![Captura desde 2026-11-12 11-43-07.png](img/Captura%20desde%202026-11-12%2011-43-07.png)
 ---
 
 ## 4. Ejercicio 3 · Vistas, búsquedas y filtros
 
 En **Facturación → Clientes → Facturas**, utilizando la **Vista lista**, se aplica el filtro predefinido **Publicadas** y se organiza mediante **Agrupar por → Cliente**. Finalmente, esta vista personalizada se almacena desde el menú **Favoritos → Guardar búsqueda actual** para su reutilización rápida.
-
-![Búsqueda guardada en Favoritos](./img/13_busqueda_favoritos.png)
+![Captura desde 2026-11-12 12-33-53.png](img/Captura%20desde%202026-11-12%2012-33-53.png)
+![Captura desde 2026-11-12 12-37-07.png](img/Captura%20desde%202026-11-12%2012-37-07.png)
 
 ---
 
@@ -98,10 +97,8 @@ El modo desarrollador habilita el acceso a metadatos técnicos, modelos, vistas 
 
 ### 5.1. Vías de activación utilizadas
 1. **Desde Ajustes**: Navegando hasta el final de la página principal de *Ajustes* y pulsando en *Herramientas de desarrollador → Activar el modo desarrollador*.
-   ![Activación desde Ajustes](./img/14_debug_ajustes.png)
 2. **Desde la URL**: Añadiendo el parámetro `?debug=1` directamente en la barra de direcciones del navegador (`http://localhost:8069/odoo?debug=1`).
-   ![Activación desde URL](./img/15_debug_url.png)
-
+![Captura desde 2026-11-12 12-38-10.png](img/Captura%20desde%202026-11-12%2012-38-10.png)
 ### 5.2. Nombres técnicos inspeccionados
 Al posicionar el cursor sobre los campos con el modo desarrollador activo, se identifican los siguientes metadatos:
 
@@ -110,24 +107,13 @@ Al posicionar el cursor sobre los campos con el modo desarrollador activo, se id
 | Formulario de Contactos | NIF / CIF | `vat` | `res.partner` |
 | Formulario de Contactos | Correo electrónico | `email` | `res.partner` |
 | Formulario de Facturas | *(Documento completo)* | — | `account.move` |
-
-![Inspección de nombres técnicos](./img/16_nombres_tecnicos.png)
-
+![Captura desde 2026-11-12 12-40-13.png](img/Captura%20desde%202026-11-12%2012-40-13.png)
+![Captura desde 2026-11-12 12-40-02.png](img/Captura%20desde%202026-11-12%2012-40-02.png)
+![Captura desde 2026-11-12 12-42-14.png](img/Captura%20desde%202026-11-12%2012-42-14.png)
 ---
 
-## 6. Incidencias
 
-Registro de incidencias y comprobaciones realizadas durante la implantación:
+## 6. Declaración de uso de IA
 
-| Fecha | Síntoma | Causa | Solución |
-| :--- | :--- | :--- | :--- |
-| 12/11/2026 | Necesidad de instalar el módulo *Inventario* adicionalmente | En Odoo 19 la casilla *Rastrear inventario* dentro de *Bienes* solo se habilita si la app de Inventario está instalada. | Instalación del módulo **Inventario** desde el menú de *Aplicaciones*. |
-| 12/11/2026 | Productos de demostración sin impuestos asignados | Los datos precargados de demo no incluyen impuestos por defecto en sus fichas. | Verificación manual y comprobación de que los productos nuevos sí heredan el IVA configurado en Facturación. |
-
----
-
-## 7. Declaración de uso de IA
-
-* **Herramienta utilizada**: Gemini (Asistente de IA).
-* **Finalidad**: Consulta de sintaxis y buenas prácticas para la configuración de `docker-compose.yml` (uso de `healthcheck` y variables de entorno) y estructuración del formato Markdown del presente manual de implantación (`README.md`).
-* **Modificaciones y verificación**: Toda la configuración de los contenedores, la creación de las bases de datos (`demo` y `real`), el recorrido funcional completo en Odoo 19, la captura de evidencias y la validación técnica de campos se realizaron y verificaron manualmente en local.
+* **Herramienta utilizada**: Gemini
+* **Finalidad**: Estructuración del formato Markdown del `README.md`
