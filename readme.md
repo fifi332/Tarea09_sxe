@@ -107,11 +107,12 @@ Al posicionar el cursor sobre los campos con el modo desarrollador activo, se id
 | Formulario de Contactos | NIF / CIF | `vat` | `res.partner` |
 | Formulario de Contactos | Correo electrónico | `email` | `res.partner` |
 | Formulario de Facturas | *(Documento completo)* | — | `account.move` |
+
+
 ![Captura desde 2026-11-12 12-40-13.png](img/Captura%20desde%202026-11-12%2012-40-13.png)
 ![Captura desde 2026-11-12 12-40-02.png](img/Captura%20desde%202026-11-12%2012-40-02.png)
 ![Captura desde 2026-11-12 12-42-14.png](img/Captura%20desde%202026-11-12%2012-42-14.png)
 ---
-
 
 ## 6. Declaración de uso de IA
 
